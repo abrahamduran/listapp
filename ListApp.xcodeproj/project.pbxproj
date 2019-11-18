@@ -17,8 +17,10 @@
 		178A49DE2381971300CA837C /* ListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A49DD2381971300CA837C /* ListAppUITests.swift */; };
 		178A4A342381ECBC00CA837C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A332381ECBC00CA837C /* UIColor+Extension.swift */; };
 		178A4A3C238225D400CA837C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A3B238225D400CA837C /* UIView+Extension.swift */; };
+		178A4A3F23823A2300CA837C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A3E23823A2300CA837C /* RoundedTextField.swift */; };
 		178A4A4623825DFA00CA837C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A4523825DFA00CA837C /* LoginViewController.swift */; };
 		178A4A482382649800CA837C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A472382649800CA837C /* SignUpViewController.swift */; };
+		178A4A4A238267EA00CA837C /* LabeledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A49238267EA00CA837C /* LabeledTextField.swift */; };
 		719FB6480F2FBB8E60EC2437 /* Pods_ListAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7C44A86CE5B567E103130 /* Pods_ListAppUITests.framework */; };
 		71F2FD2B3D408FD4352FF1D1 /* Pods_ListApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7F7DA9777979FF0668EED0 /* Pods_ListApp.framework */; };
 		8FC6AC6B82FCE1D0E68711F8 /* Pods_ListAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C351024BB5BDCA3BED9DFE6 /* Pods_ListAppTests.framework */; };
@@ -59,8 +61,10 @@
 		178A49DF2381971300CA837C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178A4A332381ECBC00CA837C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		178A4A3B238225D400CA837C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		178A4A3E23823A2300CA837C /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		178A4A4523825DFA00CA837C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		178A4A472382649800CA837C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		178A4A49238267EA00CA837C /* LabeledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledTextField.swift; sourceTree = "<group>"; };
 		5E3781FC40DAA32EEDBBF0DF /* Pods-ListApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListApp.release.xcconfig"; path = "Target Support Files/Pods-ListApp/Pods-ListApp.release.xcconfig"; sourceTree = "<group>"; };
 		6C351024BB5BDCA3BED9DFE6 /* Pods_ListAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9425B67F6A95DE7C01DEB6 /* Pods-ListAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ListAppUITests/Pods-ListAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 		178A4A3D2382299900CA837C /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				178A4A3E23823A2300CA837C /* RoundedTextField.swift */,
+				178A4A49238267EA00CA837C /* LabeledTextField.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -502,8 +508,10 @@
 				178A4A3C238225D400CA837C /* UIView+Extension.swift in Sources */,
 				178A49BC2381971100CA837C /* AppDelegate.swift in Sources */,
 				178A49BE2381971100CA837C /* SceneDelegate.swift in Sources */,
+				178A4A3F23823A2300CA837C /* RoundedTextField.swift in Sources */,
 				178A4A342381ECBC00CA837C /* UIColor+Extension.swift in Sources */,
 				178A4A4623825DFA00CA837C /* LoginViewController.swift in Sources */,
+				178A4A4A238267EA00CA837C /* LabeledTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
