@@ -99,6 +99,10 @@
 		178A49BA2381971100CA837C /* ListApp */ = {
 			isa = PBXGroup;
 			children = (
+				178A49EB2381994C00CA837C /* Data */,
+				178A49ED2381996900CA837C /* Domain */,
+				178A49EC2381995900CA837C /* UI */,
+				178A49EE2381997100CA837C /* Supporting Files */,
 				178A49BB2381971100CA837C /* AppDelegate.swift */,
 				178A49BD2381971100CA837C /* SceneDelegate.swift */,
 				178A49BF2381971100CA837C /* ViewController.swift */,
@@ -126,6 +130,98 @@
 				178A49DF2381971300CA837C /* Info.plist */,
 			);
 			path = ListAppUITests;
+			sourceTree = "<group>";
+		};
+		178A49EB2381994C00CA837C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				178A4A2D2381D39500CA837C /* Network */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		178A49EC2381995900CA837C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				178A4A2E2381D3A100CA837C /* Login */,
+				178A4A2F2381D3AA00CA837C /* Profile */,
+				178A4A312381D3DB00CA837C /* Sign Up */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		178A49ED2381996900CA837C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				178A4A2B2381D38000CA837C /* Models */,
+				178A4A2C2381D38600CA837C /* Use Cases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		178A49EE2381997100CA837C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				178A4A3D2382299900CA837C /* Custom Views */,
+				178A4A322381EC8100CA837C /* Extensions */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		178A4A2B2381D38000CA837C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		178A4A2C2381D38600CA837C /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		178A4A2D2381D39500CA837C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		178A4A2E2381D3A100CA837C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		178A4A2F2381D3AA00CA837C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		178A4A312381D3DB00CA837C /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Sign Up";
+			sourceTree = "<group>";
+		};
+		178A4A322381EC8100CA837C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		178A4A3D2382299900CA837C /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
