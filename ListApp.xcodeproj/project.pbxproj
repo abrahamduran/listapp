@@ -15,6 +15,8 @@
 		178A49C82381971300CA837C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178A49C62381971300CA837C /* LaunchScreen.storyboard */; };
 		178A49D32381971300CA837C /* ListAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A49D22381971300CA837C /* ListAppTests.swift */; };
 		178A49DE2381971300CA837C /* ListAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A49DD2381971300CA837C /* ListAppUITests.swift */; };
+		178A4A342381ECBC00CA837C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A332381ECBC00CA837C /* UIColor+Extension.swift */; };
+		178A4A3C238225D400CA837C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A3B238225D400CA837C /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		178A49D92381971300CA837C /* ListAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		178A49DD2381971300CA837C /* ListAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppUITests.swift; sourceTree = "<group>"; };
 		178A49DF2381971300CA837C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		178A4A332381ECBC00CA837C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		178A4A3B238225D400CA837C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +217,8 @@
 		178A4A322381EC8100CA837C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				178A4A332381ECBC00CA837C /* UIColor+Extension.swift */,
+				178A4A3B238225D400CA837C /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -356,8 +362,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				178A49C02381971100CA837C /* ViewController.swift in Sources */,
+				178A4A3C238225D400CA837C /* UIView+Extension.swift in Sources */,
 				178A49BC2381971100CA837C /* AppDelegate.swift in Sources */,
 				178A49BE2381971100CA837C /* SceneDelegate.swift in Sources */,
+				178A4A342381ECBC00CA837C /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
