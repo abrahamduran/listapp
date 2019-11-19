@@ -13,12 +13,11 @@ extension SwinjectStoryboard {
     @objc static func setup() {
         // MARK: Login
         defaultContainer.storyboardInitCompleted(LoginViewController.self) { (r, c) in
-//            c.viewModel = r.resolve(LoginViewModel.self)!
+            c.viewModel = r.resolve(LoginViewModel.self)!
         }
-//        defaultContainer.register(LoginViewModel.self) { r in
-//            LoginViewModel(userService: r.resolve(UserService.self)!,
-//                           organizationService: r.resolve(OrganizationService.self)!)
-//        }
+        defaultContainer.register(LoginViewModel.self) { r in
+            LoginViewModel(usecase: r.resolve(Login.self)!)
+        }
         
         // MARK: Sign Up
         defaultContainer.storyboardInitCompleted(SignUpViewController.self) { (r, c) in
@@ -31,6 +30,9 @@ extension SwinjectStoryboard {
         // MARK: Use Cases
         defaultContainer.register(SignUp.self) { r in
             SignUp(service: r.resolve(UserService.self)!)
+        }.inObjectScope(.weak)
+        defaultContainer.register(Login.self) { r in
+            Login(service: r.resolve(UserService.self)!)
         }.inObjectScope(.weak)
         
         // MARK: Services
