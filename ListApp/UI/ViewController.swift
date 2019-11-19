@@ -7,17 +7,36 @@
 //
 
 import UIKit
+import Parse
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        PFUser.getCurrentUserInBackground().continueWith { [weak self] task in
+            if let user = task.result {
+                self?.navigateTo(segue: "showHome", sender: user)
+            } else {
+                self?.navigateTo(segue: "showLogin", sender: nil)
+            }
+            
+            return task
+        }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? LoginViewController else { return }
+        guard let user = sender as? User else { return }
         
-        performSegue(withIdentifier: "showLogin", sender: nil)
+//        vc.viewModel.user = user
+    }
+}
+
+private extension ViewController {
+    func navigateTo(segue: String, sender: Any?) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: segue, sender: sender)
+        }
     }
 }
