@@ -18,7 +18,7 @@ class SignUp: UseCase {
         self.service = service
     }
     
-    func handle(params: SignUp.Params) -> Result<User, Error> {
+    func handle(params: Params) -> Result<User, Error> {
         guard emailIsValid(params.user.email) else {
             return .failure(ApplicationError.invalidEmail)
         }

@@ -7,28 +7,83 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class SignUpViewController: UIViewController {
-
+    @IBOutlet weak var fullNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var passwordVerificationTextField: UITextField!
+    @IBOutlet weak var acceptToSSwitch: UISwitch!
+    @IBOutlet weak var createAccountButton: UIButton!
+    
+    private let disposeBag = DisposeBag()
+    private var nextTextField: [UITextField: UITextField] = [:]
+    
+    var viewModel: SignUpViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-//        navigationController?.setNavigationBarHidden(false, animated: false)
+        bindUI()
+        
+        viewModel.state.drive(onNext: { [weak self] state in
+            if state.isNotLoading {
+               // TODO: stop loading animations, if any
+            }
+            switch state {
+            case .loading: break
+            case .success(let user):
+                self?.performSegue(withIdentifier: "showHome", sender: user)
+            case .error(let error):
+                self?.presentAlert(for: error)
+            case .empty: break
+            }
+        }).disposed(by: disposeBag)
+        
+        [fullNameTextField, emailTextField,
+         passwordTextField, passwordVerificationTextField].forEach { $0?.delegate = self}
+        nextTextField[fullNameTextField] = emailTextField
+        nextTextField[emailTextField] = passwordTextField
+        nextTextField[passwordTextField] = passwordVerificationTextField
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let vc = segue.destination as? LoginViewController else { return }
+        guard let user = sender as? User else { return }
+        
+//        vc.viewModel.user = user
     }
-    */
 
-    @IBAction func dismiss(_ sender: UIButton) {
+    @IBAction func createAccountAction(_ sender: UIButton) {
+        viewModel.signUp()
+    }
+    
+    @IBAction func dismissAction(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+}
+
+// MARK: UITextFieldDelegate
+extension SignUpViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let tf = nextTextField[textField] {
+            tf.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+}
+
+private extension SignUpViewController {
+    func bindUI() {
+        fullNameTextField.rx.text.orEmpty.bind(to: viewModel.fullName).disposed(by: disposeBag)
+        emailTextField.rx.text.orEmpty.bind(to: viewModel.email).disposed(by: disposeBag)
+        passwordTextField.rx.text.orEmpty.bind(to: viewModel.password).disposed(by: disposeBag)
+        passwordVerificationTextField.rx.text.orEmpty.bind(to: viewModel.passwordVefirication).disposed(by: disposeBag)
+        acceptToSSwitch.rx.isOn.bind(to: viewModel.tosAccepted).disposed(by: disposeBag)
+        viewModel.isValid.bind(to: createAccountButton.rx.isEnabled).disposed(by: disposeBag)
     }
 }
