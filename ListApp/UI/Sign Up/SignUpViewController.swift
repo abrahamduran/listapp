@@ -6,9 +6,10 @@
 //  Copyright © 2019 Abraham Isaac Durán. All rights reserved.
 //
 
-import UIKit
+import NVActivityIndicatorView
 import RxCocoa
 import RxSwift
+import UIKit
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var fullNameTextField: UITextField!
@@ -30,10 +31,11 @@ class SignUpViewController: UIViewController {
         
         viewModel.state.drive(onNext: { [weak self] state in
             if state.isNotLoading {
-               // TODO: stop loading animations, if any
+                self?.stopAnimating()
             }
             switch state {
-            case .loading: break
+            case .loading:
+                self?.startAnimating()
             case .success(let user):
                 self?.performSegue(withIdentifier: "showHome", sender: user)
             case .error(let error):
@@ -76,6 +78,8 @@ extension SignUpViewController: UITextFieldDelegate {
         return true
     }
 }
+
+extension SignUpViewController: NVActivityIndicatorViewable { }
 
 private extension SignUpViewController {
     func bindUI() {

@@ -6,6 +6,7 @@
 //  Copyright © 2019 Abraham Isaac Durán. All rights reserved.
 //
 
+import NVActivityIndicatorView
 import RxCocoa
 import RxSwift
 import UIKit
@@ -28,9 +29,11 @@ class LoginViewController: UIViewController {
         
         viewModel.state.drive(onNext: { [weak self] state in
             if state.isNotLoading {
+                self?.stopAnimating()
             }
             switch state {
             case .loading:
+                self?.startAnimating()
             case .success(let user):
                 self?.performSegue(withIdentifier: "showHome", sender: user)
             case .error(let error):
