@@ -6,6 +6,7 @@
 //  Copyright © 2019 Abraham Isaac Durán. All rights reserved.
 //
 
+import NVActivityIndicatorView
 import UIKit
 
 @UIApplicationMain
@@ -15,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        NVActivityIndicatorView.DEFAULT_COLOR = .primary
+        NVActivityIndicatorView.DEFAULT_TYPE = .circleStrokeSpin
+        NVActivityIndicatorView.DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME = 700
+        
         return true
     }
 

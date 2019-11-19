@@ -7,6 +7,7 @@ target 'ListApp' do
 
   # Pods for ListApp
   pod 'IQKeyboardManagerSwift'
+  pod 'NVActivityIndicatorView'
   pod 'Parse'
   pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard'
 
