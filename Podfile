@@ -8,6 +8,11 @@ target 'ListApp' do
   # Pods for ListApp
   pod 'IQKeyboardManagerSwift'
   pod 'Parse'
+  pod 'SwinjectStoryboard', :git => 'https://github.com/Swinject/SwinjectStoryboard'
+
+  # ReactiveX
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
   target 'ListAppTests' do
     inherit! :search_paths
