@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		1733B79C2383C1C500F3FAB4 /* RxSwift+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733B79B2383C1C500F3FAB4 /* RxSwift+Extension.swift */; };
 		1733B79E2383C58200F3FAB4 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733B79D2383C58200F3FAB4 /* Login.swift */; };
 		1733B7A02383C61000F3FAB4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733B79F2383C61000F3FAB4 /* LoginViewModel.swift */; };
+		1733B7A42383DDB000F3FAB4 /* LargeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1733B7A32383DDB000F3FAB4 /* LargeTabBar.swift */; };
 		178A49BC2381971100CA837C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A49BB2381971100CA837C /* AppDelegate.swift */; };
 		178A49BE2381971100CA837C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A49BD2381971100CA837C /* SceneDelegate.swift */; };
 		178A49C02381971100CA837C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A49BF2381971100CA837C /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		178A4A342381ECBC00CA837C /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A332381ECBC00CA837C /* UIColor+Extension.swift */; };
 		178A4A3623821F1100CA837C /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A3523821F1100CA837C /* UserService.swift */; };
 		178A4A3823821F8200CA837C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A3723821F8200CA837C /* User.swift */; };
+		178A4A3A2382202200CA837C /* ShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A392382202200CA837C /* ShoppingItem.swift */; };
 		178A4A3C238225D400CA837C /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A3B238225D400CA837C /* UIView+Extension.swift */; };
 		178A4A3F23823A2300CA837C /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A3E23823A2300CA837C /* RoundedTextField.swift */; };
 		178A4A4623825DFA00CA837C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A4523825DFA00CA837C /* LoginViewController.swift */; };
@@ -34,6 +36,14 @@
 		178A4A4C2383786F00CA837C /* ApplicationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A4B2383786F00CA837C /* ApplicationError.swift */; };
 		178A4A4E2383827200CA837C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A4D2383827200CA837C /* SignUp.swift */; };
 		178A4A502383828700CA837C /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178A4A4F2383828700CA837C /* UseCase.swift */; };
+		17E3BA60238459EA00FB14EE /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA5F238459EA00FB14EE /* ShoppingListViewController.swift */; };
+		17E3BA642384CE9B00FB14EE /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA632384CE9B00FB14EE /* ShoppingListViewModel.swift */; };
+		17E3BA662384D44C00FB14EE /* ShoppingListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA652384D44C00FB14EE /* ShoppingListService.swift */; };
+		17E3BA682384DC8C00FB14EE /* GetShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA672384DC8C00FB14EE /* GetShoppingList.swift */; };
+		17E3BA6A2384E49B00FB14EE /* ListAppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA692384E49B00FB14EE /* ListAppTabBarController.swift */; };
+		17E3BA6C2384EBA500FB14EE /* DeleteShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA6B2384EBA500FB14EE /* DeleteShoppingItem.swift */; };
+		17E3BA6E2384EBB600FB14EE /* UpdateShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA6D2384EBB600FB14EE /* UpdateShoppingItem.swift */; };
+		17E3BA702384EFF600FB14EE /* ShoppingItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA6F2384EFF600FB14EE /* ShoppingItemTableViewCell.swift */; };
 		719FB6480F2FBB8E60EC2437 /* Pods_ListAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F7C44A86CE5B567E103130 /* Pods_ListAppUITests.framework */; };
 		71F2FD2B3D408FD4352FF1D1 /* Pods_ListApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB7F7DA9777979FF0668EED0 /* Pods_ListApp.framework */; };
 		8FC6AC6B82FCE1D0E68711F8 /* Pods_ListAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C351024BB5BDCA3BED9DFE6 /* Pods_ListAppTests.framework */; };
@@ -66,6 +76,7 @@
 		1733B79B2383C1C500F3FAB4 /* RxSwift+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extension.swift"; sourceTree = "<group>"; };
 		1733B79D2383C58200F3FAB4 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		1733B79F2383C61000F3FAB4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1733B7A32383DDB000F3FAB4 /* LargeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTabBar.swift; sourceTree = "<group>"; };
 		178A49B82381971100CA837C /* ListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178A49BB2381971100CA837C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178A49BD2381971100CA837C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +94,7 @@
 		178A4A332381ECBC00CA837C /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		178A4A3523821F1100CA837C /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		178A4A3723821F8200CA837C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		178A4A392382202200CA837C /* ShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItem.swift; sourceTree = "<group>"; };
 		178A4A3B238225D400CA837C /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		178A4A3E23823A2300CA837C /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		178A4A4523825DFA00CA837C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +103,14 @@
 		178A4A4B2383786F00CA837C /* ApplicationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationError.swift; sourceTree = "<group>"; };
 		178A4A4D2383827200CA837C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		178A4A4F2383828700CA837C /* UseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
+		17E3BA5F238459EA00FB14EE /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		17E3BA632384CE9B00FB14EE /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
+		17E3BA652384D44C00FB14EE /* ShoppingListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListService.swift; sourceTree = "<group>"; };
+		17E3BA672384DC8C00FB14EE /* GetShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetShoppingList.swift; sourceTree = "<group>"; };
+		17E3BA692384E49B00FB14EE /* ListAppTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAppTabBarController.swift; sourceTree = "<group>"; };
+		17E3BA6B2384EBA500FB14EE /* DeleteShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteShoppingItem.swift; sourceTree = "<group>"; };
+		17E3BA6D2384EBB600FB14EE /* UpdateShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateShoppingItem.swift; sourceTree = "<group>"; };
+		17E3BA6F2384EFF600FB14EE /* ShoppingItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingItemTableViewCell.swift; sourceTree = "<group>"; };
 		5E3781FC40DAA32EEDBBF0DF /* Pods-ListApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListApp.release.xcconfig"; path = "Target Support Files/Pods-ListApp/Pods-ListApp.release.xcconfig"; sourceTree = "<group>"; };
 		6C351024BB5BDCA3BED9DFE6 /* Pods_ListAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ListAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA9425B67F6A95DE7C01DEB6 /* Pods-ListAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ListAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ListAppUITests/Pods-ListAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -197,10 +217,12 @@
 		178A49EC2381995900CA837C /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				17E3BA5E2384589900FB14EE /* Shopping List */,
 				178A4A2E2381D3A100CA837C /* Login */,
 				178A4A2F2381D3AA00CA837C /* Profile */,
 				178A4A312381D3DB00CA837C /* Sign Up */,
 				178A49BF2381971100CA837C /* ViewController.swift */,
+				17E3BA692384E49B00FB14EE /* ListAppTabBarController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -229,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				178A4A3723821F8200CA837C /* User.swift */,
+				178A4A392382202200CA837C /* ShoppingItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,8 +259,11 @@
 		178A4A2C2381D38600CA837C /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				17E3BA6B2384EBA500FB14EE /* DeleteShoppingItem.swift */,
+				17E3BA672384DC8C00FB14EE /* GetShoppingList.swift */,
 				1733B79D2383C58200F3FAB4 /* Login.swift */,
 				178A4A4D2383827200CA837C /* SignUp.swift */,
+				17E3BA6D2384EBB600FB14EE /* UpdateShoppingItem.swift */,
 				178A4A4F2383828700CA837C /* UseCase.swift */,
 			);
 			path = "Use Cases";
@@ -247,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				178A4A3523821F1100CA837C /* UserService.swift */,
+				17E3BA652384D44C00FB14EE /* ShoppingListService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -292,10 +319,21 @@
 		178A4A3D2382299900CA837C /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				178A4A3E23823A2300CA837C /* RoundedTextField.swift */,
 				178A4A49238267EA00CA837C /* LabeledTextField.swift */,
+				1733B7A32383DDB000F3FAB4 /* LargeTabBar.swift */,
+				178A4A3E23823A2300CA837C /* RoundedTextField.swift */,
 			);
 			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		17E3BA5E2384589900FB14EE /* Shopping List */ = {
+			isa = PBXGroup;
+			children = (
+				17E3BA5F238459EA00FB14EE /* ShoppingListViewController.swift */,
+				17E3BA632384CE9B00FB14EE /* ShoppingListViewModel.swift */,
+				17E3BA6F2384EFF600FB14EE /* ShoppingItemTableViewCell.swift */,
+			);
+			path = "Shopping List";
 			sourceTree = "<group>";
 		};
 		91D1C72F86477BE358C775FA /* Frameworks */ = {
@@ -545,24 +583,34 @@
 				1733B7A02383C61000F3FAB4 /* LoginViewModel.swift in Sources */,
 				178A4A502383828700CA837C /* UseCase.swift in Sources */,
 				1733B79123839EC400F3FAB4 /* SignUpViewModel.swift in Sources */,
+				17E3BA642384CE9B00FB14EE /* ShoppingListViewModel.swift in Sources */,
 				178A4A482382649800CA837C /* SignUpViewController.swift in Sources */,
 				178A49C02381971100CA837C /* ViewController.swift in Sources */,
 				178A4A3623821F1100CA837C /* UserService.swift in Sources */,
 				178A4A3C238225D400CA837C /* UIView+Extension.swift in Sources */,
 				1733B78F23838D1B00F3FAB4 /* DispatchQueue+Extension.swift in Sources */,
 				1733B7992383AFB400F3FAB4 /* UIViewController+Extension .swift in Sources */,
+				178A4A3A2382202200CA837C /* ShoppingItem.swift in Sources */,
 				1733B79E2383C58200F3FAB4 /* Login.swift in Sources */,
+				17E3BA6E2384EBB600FB14EE /* UpdateShoppingItem.swift in Sources */,
+				17E3BA6A2384E49B00FB14EE /* ListAppTabBarController.swift in Sources */,
 				178A4A3823821F8200CA837C /* User.swift in Sources */,
 				178A49BC2381971100CA837C /* AppDelegate.swift in Sources */,
 				1733B7952383A7D800F3FAB4 /* String+Extension.swift in Sources */,
+				17E3BA682384DC8C00FB14EE /* GetShoppingList.swift in Sources */,
 				1733B79C2383C1C500F3FAB4 /* RxSwift+Extension.swift in Sources */,
+				17E3BA662384D44C00FB14EE /* ShoppingListService.swift in Sources */,
+				17E3BA702384EFF600FB14EE /* ShoppingItemTableViewCell.swift in Sources */,
 				178A4A4E2383827200CA837C /* SignUp.swift in Sources */,
 				178A4A4C2383786F00CA837C /* ApplicationError.swift in Sources */,
 				178A49BE2381971100CA837C /* SceneDelegate.swift in Sources */,
 				178A4A3F23823A2300CA837C /* RoundedTextField.swift in Sources */,
+				1733B7A42383DDB000F3FAB4 /* LargeTabBar.swift in Sources */,
 				178A4A342381ECBC00CA837C /* UIColor+Extension.swift in Sources */,
 				1733B7972383A95900F3FAB4 /* SwinjectStoryboard+Setup.swift in Sources */,
 				178A4A4623825DFA00CA837C /* LoginViewController.swift in Sources */,
+				17E3BA6C2384EBA500FB14EE /* DeleteShoppingItem.swift in Sources */,
+				17E3BA60238459EA00FB14EE /* ShoppingListViewController.swift in Sources */,
 				178A4A4A238267EA00CA837C /* LabeledTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,7 +795,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abrahamduran.ListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -766,7 +814,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.abrahamduran.ListApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

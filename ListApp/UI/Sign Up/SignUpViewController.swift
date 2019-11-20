@@ -52,10 +52,10 @@ class SignUpViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? LoginViewController else { return }
+        guard let vc = segue.destination as? ListAppTabBarController else { return }
         guard let user = sender as? User else { return }
         
-//        vc.viewModel.user = user
+        vc.user = user
     }
 
     @IBAction func createAccountAction(_ sender: UIButton) {

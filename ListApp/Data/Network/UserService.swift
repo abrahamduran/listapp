@@ -32,6 +32,7 @@ class B4AUserService: UserService {
         _user.username = user.email
         _user.email = user.email
         _user.password = password
+        _user["fullName"] = user.fullName
         
         _user.signUpInBackground { (success, error) in
             if let error = error {
@@ -48,7 +49,7 @@ class B4AUserService: UserService {
                 _user.email = user.email
                 _user.username = user.email
                 _user["fullName"] = user.fullName
-                _user.saveInBackground { (success, error) in
+                _user.saveInBackground { (_, error) in
                     if let error = error {
                         completion(.failure(error))
                     } else {

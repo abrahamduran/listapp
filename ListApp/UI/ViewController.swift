@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         PFUser.getCurrentUserInBackground().continueWith { [weak self] task in
             if let user = task.result {
-                self?.navigateTo(segue: "showHome", sender: user)
+                self?.navigateTo(segue: "showHome", sender: User(with: user))
             } else {
                 self?.navigateTo(segue: "showLogin", sender: nil)
             }
@@ -26,10 +26,10 @@ class ViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? LoginViewController else { return }
+        guard let vc = segue.destination as? ListAppTabBarController else { return }
         guard let user = sender as? User else { return }
         
-//        vc.viewModel.user = user
+        vc.user = user
     }
 }
 

@@ -65,6 +65,12 @@ final class RoundedTextField: UITextField {
         return bounds.inset(by: padding)
     }
     
+    override func clearButtonRect(forBounds bounds: CGRect) -> CGRect {
+        var rect = super.clearButtonRect(forBounds: bounds)
+        rect.origin.x -= 8
+        return rect
+    }
+    
     override func leftViewRect(forBounds bounds: CGRect) -> CGRect {
         var rect = super.leftViewRect(forBounds: bounds)
         rect.origin.x += 16
