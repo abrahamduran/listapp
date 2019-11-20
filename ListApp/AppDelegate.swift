@@ -8,15 +8,21 @@
 
 import IQKeyboardManagerSwift
 import NVActivityIndicatorView
+import Parse
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let configuration = ParseClientConfiguration {
+            $0.applicationId = <#Back4App: Application Id#>
+            $0.clientKey = <#Back4App: Client Key#>
+            $0.server = <#Back4App: Server Url#>
+        }
+        
+        Parse.initialize(with: configuration)
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         NVActivityIndicatorView.DEFAULT_COLOR = .primary
