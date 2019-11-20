@@ -60,3 +60,9 @@ After having done that, go to Back4App and gather your keys from the API Referen
 * Server Url
 
 > For the time being, the `Server Url` is a constant value, `https://parseapi.back4app.com`, in case this were to be changed in the future, refer to the Back4App documentation.
+
+With your keys in hand, open the `AppDelegate.swift` and set the keys accordingly.
+
+And, you are done!
+
+P.S.: don't forget to set the development team before running the app.
