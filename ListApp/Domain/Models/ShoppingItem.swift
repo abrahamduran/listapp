@@ -23,6 +23,6 @@ extension ShoppingItem: Differentiable {
     var differenceIdentifier: String { return id }
     
     func isContentEqual(to source: ShoppingItem) -> Bool {
-        return id == source.id
+        return id == source.id && name == source.name && isCompleted == source.isCompleted
     }
 }
