@@ -39,10 +39,24 @@ In the Back4App dashboard you need to do 3 things:
 
 ### Setting up the app
 
-Once you finish setting up Back4App, gather your keys from the API Reference. The keys are:
+One crucial step to set up the project is to install its dependencies. I used Cocoapods to manage them. In case you need help installing Cocoapods, please refer to their [documentation](https://cocoapods.org).
+
+To install the project dependencies, please run the following:
+
+``` bash
+pod install
+```
+
+And proceed to open the workspace:
+
+``` bash
+open ListApp.xcworkspace
+```
+
+After having done that, go to Back4App and gather your keys from the API Reference. These keys are:
 
 * Application ID
 * Client key
-* Server Url*
+* Server Url
 
 > For the time being, the `Server Url` is a constant value, `https://parseapi.back4app.com`, in case this were to be changed in the future, refer to the Back4App documentation.
