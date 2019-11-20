@@ -19,6 +19,12 @@ class UpdateUserProfile: UseCase {
     }
     
     func handle(params: Params) -> Result<User, Error> {
+        guard emailIsValid(params.user.email) else {
+            return .failure(ApplicationError.invalidEmail)
+        }
+        guard passwordIsValid(params.password) else {
+            return .failure(ApplicationError.invalidPassword)
+        }
         var result: Result<User, Error>!
         let group = DispatchGroup()
         group.enter()
@@ -29,6 +35,18 @@ class UpdateUserProfile: UseCase {
         
         group.wait()
         return result
+    }
+    
+    private func emailIsValid(_ email: String) -> Bool {
+        let regex = try! NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+        return regex.firstMatch(in: email, options: [], range: NSRange(location: 0, length: email.count)) != nil
+    }
+    
+    private func passwordIsValid(_ password: String) -> Bool {
+        // Back4App password's rules: must contain a capital letter,
+        // lowercase letter, a number and be at least 8 characters long.
+        let regex = try! NSRegularExpression(pattern: "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{7,}", options: .caseInsensitive)
+        return regex.firstMatch(in: password, options: [], range: NSRange(location: 0, length: password.count)) != nil
     }
 }
 
