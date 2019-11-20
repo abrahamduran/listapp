@@ -42,7 +42,6 @@ class LoginViewController: UIViewController {
             }
         }).disposed(by: disposeBag)
         
-        [emailTextField, passwordTextField].forEach { $0?.delegate = self}
         nextTextField[emailTextField] = passwordTextField
     }
     

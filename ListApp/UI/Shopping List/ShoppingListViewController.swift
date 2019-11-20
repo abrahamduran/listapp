@@ -18,7 +18,6 @@ class ShoppingListViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     var viewModel: ShoppingListViewModel!
-    
     var user: User {
         if let u = (tabBarController as? ListAppTabBarController)?.user {
             return u

@@ -40,6 +40,9 @@
 		17A41CD52385173900EEA1BF /* AddShoppingItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A41CD42385173900EEA1BF /* AddShoppingItemViewModel.swift */; };
 		17A41CD7238518F100EEA1BF /* AddNewShoppingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A41CD6238518F100EEA1BF /* AddNewShoppingItem.swift */; };
 		17A41CD9238525F300EEA1BF /* RxSimpleAnimatableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A41CD8238525F300EEA1BF /* RxSimpleAnimatableDataSource.swift */; };
+		17A41CDB2385293100EEA1BF /* UpdateUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A41CDA2385293100EEA1BF /* UpdateUserProfile.swift */; };
+		17A41CDD238529CD00EEA1BF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A41CDC238529CD00EEA1BF /* ProfileViewController.swift */; };
+		17A41CDF238529D800EEA1BF /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A41CDE238529D800EEA1BF /* ProfileViewModel.swift */; };
 		17E3BA60238459EA00FB14EE /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA5F238459EA00FB14EE /* ShoppingListViewController.swift */; };
 		17E3BA642384CE9B00FB14EE /* ShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA632384CE9B00FB14EE /* ShoppingListViewModel.swift */; };
 		17E3BA662384D44C00FB14EE /* ShoppingListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E3BA652384D44C00FB14EE /* ShoppingListService.swift */; };
@@ -111,6 +114,9 @@
 		17A41CD42385173900EEA1BF /* AddShoppingItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShoppingItemViewModel.swift; sourceTree = "<group>"; };
 		17A41CD6238518F100EEA1BF /* AddNewShoppingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewShoppingItem.swift; sourceTree = "<group>"; };
 		17A41CD8238525F300EEA1BF /* RxSimpleAnimatableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSimpleAnimatableDataSource.swift; sourceTree = "<group>"; };
+		17A41CDA2385293100EEA1BF /* UpdateUserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserProfile.swift; sourceTree = "<group>"; };
+		17A41CDC238529CD00EEA1BF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		17A41CDE238529D800EEA1BF /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		17E3BA5F238459EA00FB14EE /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		17E3BA632384CE9B00FB14EE /* ShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewModel.swift; sourceTree = "<group>"; };
 		17E3BA652384D44C00FB14EE /* ShoppingListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListService.swift; sourceTree = "<group>"; };
@@ -275,6 +281,7 @@
 				1733B79D2383C58200F3FAB4 /* Login.swift */,
 				178A4A4D2383827200CA837C /* SignUp.swift */,
 				17E3BA6D2384EBB600FB14EE /* UpdateShoppingItem.swift */,
+				17A41CDA2385293100EEA1BF /* UpdateUserProfile.swift */,
 				178A4A4F2383828700CA837C /* UseCase.swift */,
 			);
 			path = "Use Cases";
@@ -301,6 +308,8 @@
 		178A4A2F2381D3AA00CA837C /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				17A41CDC238529CD00EEA1BF /* ProfileViewController.swift */,
+				17A41CDE238529D800EEA1BF /* ProfileViewModel.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -611,6 +620,7 @@
 				1733B78F23838D1B00F3FAB4 /* DispatchQueue+Extension.swift in Sources */,
 				1733B7992383AFB400F3FAB4 /* UIViewController+Extension .swift in Sources */,
 				178A4A3A2382202200CA837C /* ShoppingItem.swift in Sources */,
+				17A41CDB2385293100EEA1BF /* UpdateUserProfile.swift in Sources */,
 				1733B79E2383C58200F3FAB4 /* Login.swift in Sources */,
 				17E3BA6E2384EBB600FB14EE /* UpdateShoppingItem.swift in Sources */,
 				17E3BA6A2384E49B00FB14EE /* ListAppTabBarController.swift in Sources */,
@@ -627,6 +637,7 @@
 				178A4A4C2383786F00CA837C /* ApplicationError.swift in Sources */,
 				178A49BE2381971100CA837C /* SceneDelegate.swift in Sources */,
 				178A4A3F23823A2300CA837C /* RoundedTextField.swift in Sources */,
+				17A41CDD238529CD00EEA1BF /* ProfileViewController.swift in Sources */,
 				1733B7A42383DDB000F3FAB4 /* LargeTabBar.swift in Sources */,
 				178A4A342381ECBC00CA837C /* UIColor+Extension.swift in Sources */,
 				1733B7972383A95900F3FAB4 /* SwinjectStoryboard+Setup.swift in Sources */,
@@ -634,6 +645,7 @@
 				178A4A4623825DFA00CA837C /* LoginViewController.swift in Sources */,
 				17E3BA6C2384EBA500FB14EE /* DeleteShoppingItem.swift in Sources */,
 				17A41CD52385173900EEA1BF /* AddShoppingItemViewModel.swift in Sources */,
+				17A41CDF238529D800EEA1BF /* ProfileViewModel.swift in Sources */,
 				17E3BA60238459EA00FB14EE /* ShoppingListViewController.swift in Sources */,
 				178A4A4A238267EA00CA837C /* LabeledTextField.swift in Sources */,
 			);

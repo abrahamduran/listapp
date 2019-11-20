@@ -18,7 +18,6 @@ class AddShoppingItemViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     var viewModel: AddShoppingItemViewModel!
-    
     var user: User {
         if let u = (tabBarController as? ListAppTabBarController)?.user {
             return u

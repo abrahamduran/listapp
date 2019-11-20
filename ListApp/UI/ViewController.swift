@@ -31,9 +31,7 @@ class ViewController: UIViewController {
         
         vc.user = user
     }
-}
-
-private extension ViewController {
+    
     func navigateTo(segue: String, sender: Any?) {
         DispatchQueue.main.async {
             self.performSegue(withIdentifier: segue, sender: sender)
