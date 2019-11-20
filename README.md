@@ -1,5 +1,3 @@
-# listapp
-
 ![listapp-logo](https://github.com/abrahamduran/listapp/blob/master/ListApp/Assets.xcassets/logo-yellow.imageset/logo-yellow.png?raw=true)
 
 ## Simple Shopping List App
