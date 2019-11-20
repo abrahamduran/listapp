@@ -14,6 +14,7 @@ target 'ListApp' do
   # ReactiveX
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'DifferenceKit'
 
   target 'ListAppTests' do
     inherit! :search_paths

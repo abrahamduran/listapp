@@ -9,24 +9,26 @@
 import UIKit
 
 class ListAppTabBarController: UITabBarController {
-
+    
     var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        delegate = self
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension ListAppTabBarController: UITabBarControllerDelegate  {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        
+        guard let fromView = selectedViewController?.view, let toView = viewController.view else {
+            return false
+        }
+        
+        if fromView != toView {
+            UIView.transition(from: fromView, to: toView, duration: 0.3, options: [.transitionCrossDissolve], completion: nil)
+        }
+        
+        return true
     }
-    */
-
 }

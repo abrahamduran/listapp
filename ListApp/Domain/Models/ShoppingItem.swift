@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import DifferenceKit
 
 struct ShoppingItem {
     let id: String
@@ -15,5 +16,13 @@ struct ShoppingItem {
     
     var description: String {
         return isCompleted ? "Completed" : "Missing"
+    }
+}
+
+extension ShoppingItem: Differentiable {
+    var differenceIdentifier: String { return id }
+    
+    func isContentEqual(to source: ShoppingItem) -> Bool {
+        return id == source.id
     }
 }

@@ -33,6 +33,12 @@ class ShoppingListViewModel {
         list = _list.asDriver()
     }
     
+    func addItem(_ item: ShoppingItem) {
+        var list = _list.value
+        list.append(item)
+        _list.accept(list)
+    }
+    
     func getList(for user: User) {
         _state.accept(.loading)
         getShoppingList.invoke(params: user) { [unowned self] result in

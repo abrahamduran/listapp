@@ -39,6 +39,14 @@ extension SwinjectStoryboard {
             )
         }
         
+        // MARK: Add Shopping Item
+        defaultContainer.storyboardInitCompleted(AddShoppingItemViewController.self) { (r, c) in
+            c.viewModel = r.resolve(AddShoppingItemViewModel.self)
+        }
+        defaultContainer.register(AddShoppingItemViewModel.self) { r in
+            AddShoppingItemViewModel(usecase: r.resolve(AddNewShoppingItem.self)!)
+        }
+        
         // MARK: Use Cases
         defaultContainer.register(SignUp.self) { r in
             SignUp(service: r.resolve(UserService.self)!)
@@ -54,6 +62,9 @@ extension SwinjectStoryboard {
         }.inObjectScope(.weak)
         defaultContainer.register(DeleteShoppingItem.self) { r in
             DeleteShoppingItem(service: r.resolve(ShoppingListService.self)!)
+        }.inObjectScope(.weak)
+        defaultContainer.register(AddNewShoppingItem.self) { r in
+            AddNewShoppingItem(service: r.resolve(ShoppingListService.self)!)
         }.inObjectScope(.weak)
         
         // MARK: Services

@@ -35,17 +35,15 @@ class ShoppingListViewController: UIViewController {
         tableView.refreshControl?.addTarget(self, action: #selector(refreshItems), for: .valueChanged)
         tableView.tableFooterView = UIView()
         
-        viewModel.list
-        .asObservable()
-        .bind(
-        to: tableView.rx.items(
-            cellIdentifier: "item-cell",
-            cellType: ShoppingItemTableViewCell.self
-            )
-        ) { _, data, cell in
+        let datasource = RxSimpleAnimatableDataSource<ShoppingItem, ShoppingItemTableViewCell>(identifier: "item-cell") { _, data, cell in
             cell.item = data
             cell.delegate = self
-        }.disposed(by: disposeBag)
+        }
+        
+        viewModel.list
+        .asObservable()
+        .bind(to: tableView.rx.items(dataSource: datasource))
+        .disposed(by: disposeBag)
         
         viewModel.state.drive(onNext: { [weak self] state in
             switch state {
@@ -85,6 +83,7 @@ class ShoppingListViewController: UIViewController {
     }
 }
 
+// MARK: ShoppingItemCellDelegate
 extension ShoppingListViewController: ShoppingItemCellDelegate {
     func setItemCompleted(_ item: ShoppingItem, isCompleted: Bool) {
         viewModel.setItemCompleted(item, isCompleted: isCompleted, for: user)
@@ -105,6 +104,7 @@ extension ShoppingListViewController: ShoppingItemCellDelegate {
     }
 }
 
+// MARK: UITextFieldDelegate
 extension ShoppingListViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

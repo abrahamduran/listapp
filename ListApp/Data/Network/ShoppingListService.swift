@@ -13,6 +13,7 @@ protocol ShoppingListService {
     typealias ListCompletionHandler = (Result<[ShoppingItem], Error>) -> Void
     typealias CompletionHandler = (Result<ShoppingItem, Error>) -> Void
     func getList(for user: User, completion: @escaping ListCompletionHandler)
+    func add(item: ShoppingItem, for user: User, completion: @escaping CompletionHandler)
     func update(item: ShoppingItem, for user: User, completion: @escaping CompletionHandler)
     func delete(item: ShoppingItem, for user: User, completion: @escaping CompletionHandler)
 }
@@ -26,6 +27,23 @@ class B4AShoppingListService: ShoppingListService {
             if let results = results {
                 let items = results.map(ShoppingItem.init)
                 completion(.success(items))
+            } else {
+                completion(.failure(error ?? ApplicationError.unknown))
+            }
+        }
+    }
+    
+    func add(item: ShoppingItem, for user: User, completion: @escaping CompletionHandler) {
+        let object = PFObject(className:"ShoppingItem")
+        
+        object["name"] = item.name
+        object["userId"] = user.id
+        object["isCompleted"] = item.isCompleted
+        
+        // Saves the new object.
+        object.saveInBackground { (success, error) in
+            if success {
+                completion(.success(ShoppingItem(with: object)))
             } else {
                 completion(.failure(error ?? ApplicationError.unknown))
             }
@@ -64,8 +82,8 @@ class B4AShoppingListService: ShoppingListService {
                     }
                 }
             } else {
-               completion(.failure(error ?? ApplicationError.unknown))
-           }
+                completion(.failure(error ?? ApplicationError.unknown))
+            }
         }
     }
 }
