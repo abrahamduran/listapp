@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable
 class LargeTabBar: UITabBar {
-    private let kTabBarHeight: CGFloat = 128
+    private let kTabBarHeight: CGFloat = 48
     
     override var cornerRadius: CGFloat {
         set {
@@ -35,7 +35,7 @@ class LargeTabBar: UITabBar {
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         var _size = super.sizeThatFits(size)
-        _size.height = kTabBarHeight
+        _size.height += kTabBarHeight
         
         return _size
     }
